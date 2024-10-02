@@ -13,8 +13,9 @@
 #RUN rm -rf photobusiness photobusiness.zip
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 #EXPOSE 80 /#
-FROM nginx:latest
-COPY . /usr/share/nginx/html/index.html
+FROM busybox:latest
+MAINTAINER AnilKumar M (mavricktrainings@gmail.com)
+CMD ["cal"
  
  
 # FROM  centos:latest
