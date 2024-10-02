@@ -10,12 +10,24 @@
 #WORKDIR /var/www/html/
 #RUN unzip photobusiness.zip
 #RUN cp -rvf photobusiness/* .
-#RUN rm -rf photobusiness photobusiness.zip
+#RUN rm -rfFROM ubuntu:18.04
+MAINTAINER trainings.anil@gmail.com
+
+RUN apt-get update \
+    && apt-get install -y nginx \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && echo "daemon off;" >> /etc/nginx/nginx.conf
+
+EXPOSE 80
+
+CMD ["nginx"] photobusiness photobusiness.zip
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 #EXPOSE 80 /#
-FROM busybox:latest
-MAINTAINER AnilKumar M (mavricktrainings@gmail.com)
-CMD ["cal"]
+#FROM busybox:latest
+#MAINTAINER AnilKumar M (mavricktrainings@gmail.com)
+#CMD ["cal"]
+
  
  
 # FROM  centos:latest
