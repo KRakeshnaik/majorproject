@@ -22,7 +22,8 @@ RUN apt-get update \
 
 EXPOSE 80
 
-CMD ["nginx"] photobusiness photobusiness.zip
+CMD ["nginx"] 
+#photobusiness photobusiness.zip
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 #EXPOSE 80 /#
 #FROM busybox:latest
