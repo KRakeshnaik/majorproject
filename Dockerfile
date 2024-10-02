@@ -15,7 +15,7 @@
 #EXPOSE 80 /#
 FROM busybox:latest
 MAINTAINER AnilKumar M (mavricktrainings@gmail.com)
-CMD ["cal"
+CMD ["cal"]
  
  
 # FROM  centos:latest
