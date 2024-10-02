@@ -14,7 +14,7 @@
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 #EXPOSE 80 /#
 FROM nginx:latest
-COPY ./index.html /usr/share/nginx/html/index.html
+COPY . /usr/share/nginx/html/index.html
  
  
 # FROM  centos:latest
