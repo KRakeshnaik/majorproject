@@ -11,6 +11,7 @@
 #RUN unzip photobusiness.zip
 #RUN cp -rvf photobusiness/* .
 #RUN rm -rfFROM ubuntu:18.04
+FROM ubuntu:18.04
 MAINTAINER trainings.anil@gmail.com
 
 RUN apt-get update \
