@@ -16,7 +16,7 @@
 #CMD /usr/games/fortune -a | cowsay
 #photobusiness photobusiness.zip
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-#EXPOSE 80 /#
+#EXPOSE 80
 FROM nginx:latest
 COPY . /usr/share/nginx/html
  
