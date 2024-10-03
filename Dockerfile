@@ -11,16 +11,17 @@
 #RUN unzip photobusiness.zip
 #RUN cp -rvf photobusiness/* .
 #RUN rm -rfFROM ubuntu:18.04
-FROM docker/whalesay:latest
-RUN apt-get -y update && apt-get install -y fortunes
-CMD /usr/games/fortune -a | cowsay
+#FROM docker/whalesay:latest
+#RUN apt-get -y update && apt-get install -y fortunes
+#CMD /usr/games/fortune -a | cowsay
 #photobusiness photobusiness.zip
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 #EXPOSE 80 /#
 #FROM busybox:latest
 #MAINTAINER AnilKumar M (mavricktrainings@gmail.com)
 #CMD ["cal"]
-
+FROM nginx:latest
+COPY . /usr/share/nginx/html
  
  
 # FROM  centos:latest
