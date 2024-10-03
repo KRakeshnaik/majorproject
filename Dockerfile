@@ -17,9 +17,6 @@
 #photobusiness photobusiness.zip
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 #EXPOSE 80 /#
-#FROM busybox:latest
-#MAINTAINER AnilKumar M (mavricktrainings@gmail.com)
-#CMD ["cal"]
 FROM nginx:latest
 COPY . /usr/share/nginx/html
  
