@@ -1,9 +1,4 @@
-FROM ubuntu:18.04
-MAINTAINER trainings.anil@gmail.com
-RUN apt-get update \
-&& apt-get install -y nginx \
-EXPOSE 80
-CMD ["nginx"]
+
 #FROM  centos:latest
 #MAINTAINER trainings.anil@gmail.com
 #RUN cd /etc/yum.repos.d/
@@ -23,8 +18,8 @@ CMD ["nginx"]
 #photobusiness photobusiness.zip
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 #EXPOSE 80
-#FROM nginx:latest
-#COPY . /usr/share/nginx/html
+FROM nginx:latest
+COPY . /usr/share/nginx/html
  
  
 # FROM  centos:latest
