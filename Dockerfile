@@ -5,7 +5,7 @@ RUN apt-get update \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 && echo "daemon off;" >> /etc/nginx/nginx.conf
-EXPOSE 80
+EXPOSE 8090
 CMD ["nginx"]
 #FROM  centos:latest
 #MAINTAINER trainings.anil@gmail.com
