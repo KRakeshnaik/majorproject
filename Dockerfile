@@ -1,12 +1,12 @@
-#FROM ubuntu:18.04
-#MAINTAINER trainings.anil@gmail.com
-#RUN apt-get update \
-#&& apt-get install -y nginx \
-#&& apt-get clean \
-#&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-#&& echo "daemon off;" >> /etc/nginx/nginx.conf
-#EXPOSE 80
-#CMD ["nginx"]
+FROM ubuntu:18.04
+MAINTAINER trainings.anil@gmail.com
+RUN apt-get update \
+&& apt-get install -y nginx \
+&& apt-get clean \
+&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+&& echo "daemon off;" >> /etc/nginx/nginx.conf
+EXPOSE 80
+CMD ["nginx"]
 #FROM  centos:latest
 #MAINTAINER trainings.anil@gmail.com
 #RUN cd /etc/yum.repos.d/
@@ -26,8 +26,8 @@
 #photobusiness photobusiness.zip
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 #EXPOSE 80
-FROM nginx:latest
-COPY . /usr/share/nginx/html
+#FROM nginx:latest
+#COPY . /usr/share/nginx/html
  
  
 # FROM  centos:latest
